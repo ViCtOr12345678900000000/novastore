@@ -4,7 +4,7 @@ export default function MidBar({ activeCategory, setActiveCategory, sortBy, setS
 
   return (
     <div 
-      className="w-full h-50 md:h-35 flex flex-wrap items-baseline md:rounded-full min-w-[250px] p-4 md:p-7 pb-3 justify-between sticky top-24 z-40 bg-white/75 border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
+      className="w-full h-60 md:h-35 flex flex-wrap items-baseline md:rounded-full min-w-[250px] p-4 md:p-7 pb-3 justify-between sticky top-24 z-40 bg-white/75 border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
       style={{ backdropFilter: "blur(30px) saturate(180%)", WebkitBackdropFilter: "blur(30px) saturate(180%)" }}
     >
       <div className="flex gap-3 flex-wrap">

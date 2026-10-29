@@ -25,7 +25,7 @@ export default function ProductGrid({ products, favorites, toggleFav, addToCart 
               </button>
 
               {/* HOVER ADD TO CART */}
-              <div className="absolute  bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center rounded-full mt-45 justify-center z-20">
+              <div className="absolute  lg:bg-black/20 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center rounded-full mt-45 justify-center z-20">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
