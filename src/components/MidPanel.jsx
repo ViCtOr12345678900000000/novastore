@@ -10,7 +10,7 @@ export default function MidPanel({scrollToGrid}){
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-black/10 text-[11px] tracking-[0.15em] font-medium">
                     <Sparkles className="w-3.5 h-3.5" />
                     FALL / WINTER 2026 — DROP 02
-                </div>
+                </div> 
 
                 {/* Big Title - EXACT FONT */}
                 <div className="mt-8 leading-[0.85] font-['Instrument_Serif']">
