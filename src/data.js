@@ -1,0 +1,26 @@
+export const products = [
+  { id: 1, category: "APPAREL", tag: "SALE", tagColor: "bg-red-500", name: "Oversized Tee", price: 46, rating: 4.8, colors: ["#000","#EDE7DC","#FFF"], image: "/assets/oversizedTee.jpg", bg: "#EDE7DC" },
+  { id: 2, category: "FOOTWEAR", tag: "NEW", tagColor: "bg-black", name: "Leather Sneakers", price: 120, rating: 4.9, colors: ["#000","#C19A6B"], image: "/assets/leatherShoe.jpg", bg: "#E8E8E8" },
+  { id: 3, category: "ACCESSORIES", tag: null, tagColor: "", name: "Mini Tote", price: 85, rating: 4.6, colors: ["#D9A679","#000","#FFF"], image: "/assets/miniTote.jpg", bg: "#EDE7DC" },
+  { id: 4, category: "APPAREL", tag: "NEW", tagColor: "bg-black", name: "Silk Slip Dress", price: 128, rating: 4.7, colors: ["#000","#F5EDE8","#D9CCB8"], image: "/assets/silkSlipDress.jpg", bg: "#F5EDE8" },
+  { id: 5, category: "ACCESSORIES", tag: "SALE", tagColor: "bg-red-500", name: "Cashmere Beanie", price: 42, rating: 4.5, colors: ["#000","#EDE7DC","#D9CCB8"], image: "/assets/cashmereBeanie.jpg", bg: "#D9CCB8" },
+  { id: 6, category: "BEAUTY", tag: null, tagColor: "", name: "Ceramic Matte Lip", price: 28, rating: 4.8, colors: ["#B03060","#E8C4C4","#111"], image: "/assets/ceramicMatteLip.jpg", bg: "#E8C4C4" },
+  { id: 7, category: "FOOTWEAR", tag: null, tagColor: "", name: "Suede Loafers", price: 165, rating: 4.5, colors: ["#7A5A3A","#000"], image: "/assets/loafers.jpg", bg: "#D9CCB8" },
+  { id: 8, category: "APPAREL", tag: "SALE", tagColor: "bg-red-500", name: "Wool Blend Coat", price: 245, rating: 4.9, colors: ["#000","#EDE7DC"], image: "/assets/woolBlendCoat.jpg", bg: "#EDE7DC" },
+  { id: 9, category: "ACCESSORIES", tag: "NEW", tagColor: "bg-black", name: "Sculpt Hair Clip", price: 22, rating: 4.7, colors: ["#EDE7DC","#D9CCB8","#000"], image: "/assets/sculptHairClips.jpg", bg: "#EDE7DC" },
+  { id: 10, category: "APPAREL", tag: "NEW", tagColor: "bg-black", name: "Linen Crop Shirt", price: 78, rating: 4.6, colors: ["#FFF","#EDE7DC","#D9CCB8"], image: "/assets/linenCrop.jpg", bg: "#F5EDE8" },
+  { id: 11, category: "BEAUTY", tag: null, tagColor: "", name: "Shea Lip Balm", price: 18, rating: 4.8, colors: ["#E8D0B0","#EDE7DC"], image: "/assets/sheaLipBalm.jpg", bg: "#F5EDE8" },
+  { id: 12, category: "ACCESSORIES", tag: "SALE", tagColor: "bg-red-500", name: "Canvas Tote", price: 64, rating: 4.6, colors: ["#000","#EDE7DC","#FFF"], image: "/assets/canvasTote.jpg", bg: "#EDE7DC" },
+  
+  // NEW 10
+  { id: 13, category: "APPAREL", tag: "NEW", tagColor: "bg-black", name: "Cargo Pants", price: 95, rating: 4.7, colors: ["#D9CCB8","#000","#EDE7DC"], image: "/assets/cargoPants.jpg", bg: "#EDE7DC" },
+  { id: 14, category: "ACCESSORIES", tag: null, tagColor: "", name: "Corduroy Cap", price: 32, rating: 4.5, colors: ["#000","#EDE7DC"], image: "/assets/corduroyCap.jpg", bg: "#E8E8E8" },
+  { id: 15, category: "APPAREL", tag: null, tagColor: "", name: "Chunky Knit Sweater", price: 142, rating: 4.9, colors: ["#FFF","#D9CCB8","#EDE7DC"], image: "/assets/knitSweater.jpg", bg: "#F5EDE8" },
+  { id: 16, category: "FOOTWEAR", tag: "NEW", tagColor: "bg-black", name: "Ballet Flats", price: 88, rating: 4.6, colors: ["#000","#EDE7DC"], image: "/assets/balletFlats.jpg", bg: "#EDE7DC" },
+  { id: 17, category: "ACCESSORIES", tag: "SALE", tagColor: "bg-red-500", name: "Pearl Hoop Earrings", price: 38, rating: 4.8, colors: ["#E8D0B0","#FFF"], image: "/assets/pearlHoops.jpg", bg: "#F5EDE8" },
+  { id: 18, category: "BEAUTY", tag: "NEW", tagColor: "bg-black", name: "Gloss Lip Serum", price: 24, rating: 4.9, colors: ["#E8C4C4","#B03060"], image: "/assets/glossSerum.jpg", bg: "#E8C4C4" },
+  { id: 19, category: "APPAREL", tag: null, tagColor: "", name: "Denim Jacket", price: 165, rating: 4.7, colors: ["#8CA6C8","#E8E8E8"], image: "/assets/denimJacket.jpg", bg: "#E8E8E8" },
+  { id: 20, category: "ACCESSORIES", tag: null, tagColor: "", name: "Hoodie", price: 252, rating: 4.6, colors: ["#000","#7A5A3A"], image: "/assets/Hoodie.jpg", bg: "#EDE7DC" },
+  { id: 21, category: "APPAREL", tag: "SALE", tagColor: "bg-red-500", name: "Ribbed Tank", price: 34, rating: 4.5, colors: ["#FFF","#000","#EDE7DC"], image: "/assets/ribbedTank.jpg", bg: "#F5EDE8" },
+  { id: 22, category: "ACCESSORIES", tag: "NEW", tagColor: "bg-black", name: "Suede Sling Bag", price: 110, rating: 4.8, colors: ["#7A5A3A","#D9CCB8"], image: "/assets/slingBag.jpg", bg: "#D9CCB8" },
+]
