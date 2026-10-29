@@ -20,7 +20,7 @@ export default function MidPanel({scrollToGrid}){
                         <span className="font-normal text-black">/</span>
                         <span className="font-normal italic text-black/60">Fall</span>
                     </h1>
-                    <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black">2024</h1>
+                    <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black">2026</h1>
                 </div>
 
                 {/* Description */}
