@@ -4,8 +4,8 @@ export default function MidBar({ activeCategory, setActiveCategory, sortBy, setS
 
   return (
     <div 
-      className="w-full h-60 md:h-35 flex flex-wrap items-baseline md:rounded-full min-w-[250px] p-4 md:p-7 pb-3 justify-between sticky top-24 z-40 bg-white/75 border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
-      style={{ backdropFilter: "blur(30px) saturate(180%)", WebkitBackdropFilter: "blur(30px) saturate(180%)" }}
+      className="font-['Inter'] text-black/60 w-full h-60 md:h-35 flex flex-wrap rounded-2xl items-baseline md:rounded-full min-w-[250px] p-4 md:p-7 pb-3 justify-between sticky top-23 z-40 bg-white/75 border border-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
+      style={{ backdropFilter: "blur(9px) saturate(180%)", WebkitBackdropFilter: "blur(30px) saturate(180%)" }}
     >
       <div className="flex gap-3 flex-wrap">
         {categories.map(cat => {
@@ -14,8 +14,8 @@ export default function MidBar({ activeCategory, setActiveCategory, sortBy, setS
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`border h-10 p-2 px-5 rounded-full uppercase text-[12px] font-medium transition
-                ${activeCategory === cat ? "bg-black text-white border-black" : "bg-white border-black/10 hover:border-black/30"}`}
+              className={`border hover:cursor-pointer h-10 p-2 px-5 rounded-full uppercase text-[12px] font-medium transition
+                ${activeCategory === cat ? "bg-black text-white border-black" : "bg-mauve-200/20 border-black/10 hover:border-black/30"}`}
             >
               {cat} {isFav && favorites.length > 0 ? `(${favorites.length})` : ""}
             </button>
@@ -23,12 +23,12 @@ export default function MidBar({ activeCategory, setActiveCategory, sortBy, setS
         })}
       </div>
 
-      <div className="flex  gap-6 border border-white/80 bg-white/60 p-2 mt- md:mt-4 rounded-full h-12 items-center px-4 backdrop-blur-xl">
+      <div className="flex  gap-6 border border-black/20 bg-mauve-200/20 p-2 mt- md:mt-4 rounded-full h-12 items-center px-4 backdrop-blur-xl">
         {sorts.map(s => (
           <button
             key={s}
             onClick={() => setSortBy(s)}
-            className={`text-[12px] uppercase tracking-wide transition
+            className={`text-[12px] uppercase hover:cursor-pointer md:tracking-wide  transition
               ${sortBy === s ? "font-semibold text-black" : "text-black/40 hover:text-black/70"}`}
           >
             {s}

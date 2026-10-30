@@ -4,7 +4,7 @@ import teeman from "../assets/teeman.jpg"
 export default function MidPanel({scrollToGrid}){
     return(
         <div className="grid p-5 md:flex gap-10">
-            <div className="w-full h- bg-[#FFFEFB] border border-black/10 rounded-[36px] p-8 md:p-10 font-['Inter']">
+            <div className="w-full h- bg-mauve-200 border border-black/10 rounded-[36px] p-8 md:p-10 font-['Inter']">
 
                 {/* Top pill */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-black/10 text-[11px] tracking-[0.15em] font-medium">
@@ -15,8 +15,9 @@ export default function MidPanel({scrollToGrid}){
                 {/* Big Title - EXACT FONT */}
                 <div className="mt-8 leading-[0.85] font-['Instrument_Serif']">
                     <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black">New</h1>
-                    <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black">Collection</h1>
+                    <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black/60">Collection</h1>
                     <h1 className="text-[64px] md:text-[80px] tracking-[-0.05em] flex gap-4">
+                                            <h1 className="text-[64px] md:text-[80px] font-normal tracking-[-0.05em] text-black">Winter</h1>
                         <span className="font-normal text-black">/</span>
                         <span className="font-normal italic text-black/60">Fall</span>
                     </h1>
@@ -30,7 +31,7 @@ export default function MidPanel({scrollToGrid}){
 
                 {/* Bottom */}
                 <div className="mt-12 flex items-center gap-">
-                    <button onClick={scrollToGrid} className="flex items-center gap-2 bg-black text-white px-7 py-4 rounded-full text-[13px] font-bold tracking-wide hover:bg-black/80 transition">
+                    <button onClick={scrollToGrid} className="flex font-['Inter'] items-center gap-2 bg-black text-white px-7 py-4 rounded-full text-[13px] font-bold tracking-wide hover:bg-black/80 transition">
                         SHOP NOW
                         <ArrowUpRight className="w-4 h-4" />
                     </button>

@@ -23,17 +23,17 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
   return (
     <>
     <div className=" sticky top-0 z-50 p-6 flex w-full justify-between bg-[#FFFEFB] border-b border-black/10 relative">
-      
+     
       <div>
         <div className="flex items-center gap-2">
           <div className="flex w-10 h-10 bg-black border rounded-full text-[18px] text-white font-bold justify-center items-center">N</div>
-          <p className="text-black text-[20px] font-bold">NOVA</p>
+          <a href="#" className="text-black text-[20px] font-bold font-['Instrument_Serif'] tracking-widest">NOVA</a>
           <button className="md:hidden w-9 h-9 rounded-full bg-black text-white flex items-center justify-center ml-2" onClick={() => setShowSidebar(true)}>☰</button>
 
-          <div className="pl-8 hidden md:flex gap-4 text-[15px] font-medium">
-            <button onClick={scrollToGrid} className="uppercase">Shop</button>
-            <button onClick={scrollToGrid} className="uppercase">New</button>
-            <button onClick={scrollToGrid} className="uppercase">sale</button>
+          <div className="pl-8 hidden md:flex gap-4 text-[15px] font-['Inter']">
+            <button onClick={scrollToGrid} className="uppercase font-thin">Shop</button>
+            <button onClick={scrollToGrid} className="uppercase font-thin">New</button>
+            <button onClick={scrollToGrid} className="uppercase font-thin">sale</button>
           </div>
         </div>
       </div>
@@ -42,13 +42,13 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
       <div className="relative gap-4 hidden md:flex w-full max-w-sm items-center">
         <div className="relative w-full">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-          <input value={search} onChange={(e)=> setSearch(e.target.value)} placeholder="Search..." className="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black text-sm" />
+          <input value={search} onChange={(e)=> setSearch(e.target.value)} placeholder="Search..." className="w-full font-['Inter'] pl-10 pr-4 py-2.5 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black text-sm" />
         </div>
         <button onClick={() => setShowCart(true)} className="relative">
           <ShoppingBag className="w-5 h-5" />
           <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-black text-white flex justify-center items-center text-[10px]">{cartCount}</span>
         </button>
-        <div className="flex w-10 h-10 bg-orange-200/70 border rounded-full text-[14px] text-white font-bold justify-center items-center">VC</div>
+        <div className="flex w-10 h-10 bg-mauve-200/20 border rounded-full text-[14px] text-black/50 p-5 font-bold justify-center items-center">VC</div>
       </div>
 
       {/* MOBILE */}
@@ -58,31 +58,31 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
           <ShoppingBag className="w-5 h-5" />
           <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-black text-white flex justify-center items-center text-[10px]">{cartCount}</span>
         </button>
-        <div className="flex w-9 h-9 bg-orange-200/70 border rounded-full text-[12px] text-white font-bold justify-center items-center">VC</div>
+        <div className="flex w-9 h-9 bg-mauve-200/20 border rounded-full text-[12px] text-black/50  font-bold justify-center items-center">VC</div>
       </div>
 
       {showSearch && (
-        <div className="md:hidden absolute top-full left-0 w-full p-4 bg-[#FFFEFB] border-b z-50">
+        <div className="md:hidden absolute top-full left-0 w-full p-4 bg-[#FFFEFB] border-b border-black/20 z-50">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-            <input autoFocus value={search} onChange={(e)=> setSearch(e.target.value)} placeholder="Search..." className="w-full pl-10 pr-4 py-3 rounded-full border" />
+            <input  value={search} onChange={(e)=> setSearch(e.target.value)} placeholder="Search..." className=" font-['Inter'] w-full pl-10 pr-4 py-3 rounded-2xl border border-black/20" />
           </div>
         </div>
       )}
     </div>
 
   {/* SIDEBAR - your old code */}
-  <div onClick={() => setShowSidebar(false)} className={`fixed inset-0 bg-black/20 backdrop-blur-[2px] z-[60] transition-opacity ${showSidebar ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
-  <div className={`fixed left-0 top-0 h-full w-[280px] bg-white z-[70] p-6 flex flex-col justify-between shadow-2xl transition-transform ${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
+  <div onClick={() => setShowSidebar(false)} className={`fixed inset-0 bg-black/20 backdrop-blur-[2px] font-['Inter'] z-[60] transition-opacity ${showSidebar ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
+  <div className={`fixed left-0 top-0 h-full w-[280px] font-['Inter'] rounded-r-2xl bg-white z-[70] p-6 flex flex-col justify-between shadow-2xl transition-transform ${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
     <div>
       <div className="flex justify-between items-center mb-8">
         <div className="flex items-center gap-2"><div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold">N</div><p className="font-bold text-sm">NOVA</p></div>
         <button onClick={() => setShowSidebar(false)} className="w-8 h-8 rounded-full border flex items-center justify-center"><X className="w-4 h-4"/></button>
       </div>
       <div className="flex flex-col gap-2">
-        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full bg-zinc-100 text-[13px]">Shop</button>
-        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full bg-zinc-100 text-[13px]">New</button>
-        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full bg-zinc-100 text-[13px]">Sale</button>
+        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full hover:cursor-pointer text-[19px] uppercase hover:bg-orange-200/20  hover:scale-105 duration-300">Shop</button>
+        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full hover:cursor-pointer text-[19px] uppercase hover:bg-orange-200/20  hover:scale-105 duration-300">New</button>
+        <button onClick={()=>{setShowSidebar(false); scrollToGrid()}} className="text-left px-4 py-3 rounded-full hover:cursor-pointer text-[19px] hover:bg-orange-200/20  hover:scale-105 duration-300 uppercase">Sale</button>
       </div>
     </div>
     <p className="text-[10px] text-zinc-400 border-t pt-4">© 2026 NOVA STORE</p>
@@ -90,8 +90,8 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
 
   {/* CART DRAWER - EXACT LIKE YOUR SCREENSHOT */}
   <>
-  <div onClick={() => setShowCart(false)} className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] transition-opacity ${showCart ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
-  <div className={`fixed right-0 top-0 h-full w-[400px] max-w-[90vw] bg-white z-[70] flex flex-col shadow-2xl transition-transform ${showCart ? "translate-x-0" : "translate-x-full"}`}>
+  <div onClick={() => setShowCart(false)} className={`fixed inset-0 bg-black/20  backdrop-blur-sm z-[60] transition-opacity ${showCart ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
+  <div className={`fixed right-0 top-0 h-full w-[400px] max-w-[90vw] font-['Inter'] rounded-l-2xl bg-white z-[70] flex flex-col shadow-2xl transition-transform ${showCart ? "translate-x-0" : "translate-x-full"}`}>
     {/* Header */}
     <div className="flex justify-between items-center p-5 border-b">
       <div className="flex items-center gap-3">

@@ -4,6 +4,7 @@ import MidBar from "./components/MidBar"
 import ProductGrid from "./components/ProductGrid"
 import Navbar from "./components/Navbar"
 import MidPanel from "./components/MidPanel"
+import ProductModal from "./components/ProductModal"
 import Footer from "./components/Footer"
 
 export default function App(){
@@ -11,6 +12,18 @@ export default function App(){
   const [sortBy, setSortBy] = useState("Featured")
   const [search, setSearch] = useState("")
   const gridRef = useRef(null)
+
+
+  const [selectedProduct, setSelectedProduct] = useState(null)
+
+  // This is the function that opens the modal
+  const handleProductClick = (product) => {
+    setSelectedProduct(product) // sets it to the clicked product = true/open
+  }
+
+    const closeModal = () => {
+    setSelectedProduct(null)
+  }
 
   // DELETE THE OLD const [cart, setCart] = useState([])
   // KEEP ONLY THESE TWO:
@@ -76,8 +89,16 @@ export default function App(){
       <MidPanel scrollToGrid={scrollToGrid} />
       <MidBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} sortBy={sortBy} setSortBy={setSortBy} favorites={favorites} />
       <div ref={gridRef}>
-        <ProductGrid products={filteredProducts} favorites={favorites} toggleFav={toggleFav} addToCart={addToCart} />
+        <ProductGrid products={filteredProducts} onProductClick={handleProductClick} favorites={favorites} toggleFav={toggleFav} addToCart={addToCart} />
+
       </div>
+        <ProductModal
+        product={selectedProduct}
+        onClose={closeModal}
+        addToCart={addToCart}
+        favorites={favorites}
+        toggleFav={toggleFav}
+      />
       <Footer scrollToGrid={scrollToGrid} />
     </div>
   )

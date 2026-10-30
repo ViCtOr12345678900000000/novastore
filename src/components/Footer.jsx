@@ -1,6 +1,6 @@
 export default function Footer( {scrollToGrid} ) {
   return (
-    <footer className="w-full bg-[#FFFEFB] px-4 md:px-6 py-12 md:py-20 border-t border-black/5">
+    <footer className=" w-full bg-[#FFFEFB] px-4 md:px-6 py-12 md:py-20 border-t border-black/5">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
         
         {/* LEFT - NEWSLETTER CARD */}
@@ -58,7 +58,7 @@ export default function Footer( {scrollToGrid} ) {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mt-10 pt-8 border-t border-black/10">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-[10px] font-bold">N</div>
-              <span className="text-[12px] font-semibold">NOVA © 2026</span>
+              <span className="text-[12px] font-semibold ">NOVA © 2026</span>
             </div>
             <span className="text-[11px] text-black/30 tracking-wide">CRAFTED IN LISBON — SHIPS WORLDWIDE</span>
           </div>
