@@ -24,11 +24,11 @@ export default function ProductModal({ product, onClose, addToCart, favorites, t
   return (
     <div className="fixed inset-0 z-[100] flex items-end lg:items-center justify-center">
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full lg:max-w-[900px] max-h-[90vh] lg:max-h-[80vh] bg-[#FFFEFB] rounded-t-[32px] lg:rounded-[32px] overflow-hidden flex flex-col lg:flex-row animate-in slide-in-from-bottom duration-300 shadow-2xl">
+      <div className="relative w-full lg:max-w-[1090px] max-h-[90vh] lg:max-h-[80vh] bg-[#FFFEFB] rounded-t-[32px] lg:rounded-[32px] overflow-hidden flex flex-col lg:flex-row animate-in slide-in-from-bottom duration-300 shadow-2xl">
         <button onClick={onClose} className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition">
           <X className="w-4 h-4" />
         </button>
-        <div className="w-full lg:w-[55%] h-[380px] lg:h-[600px] relative flex-shrink-0" style={{ background: product.bg }}>
+        <div className="w-full lg:w-[65%] h-[580px] lg:h-[600px] relative flex-shrink-0" style={{ background: product.bg }}>
           <img src={variantImage} alt={product.name} className="w-full h-full object-cover" 
                onError={(e) => e.target.src = product.image} />
           <div className="absolute top-4 left-4 flex gap-2">
