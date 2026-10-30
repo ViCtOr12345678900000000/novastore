@@ -28,7 +28,7 @@ export default function ProductModal({ product, onClose, addToCart, favorites, t
         <button onClick={onClose} className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition">
           <X className="w-4 h-4" />
         </button>
-        <div className="w-full lg:w-[65%] h-[580px] lg:h-[600px] relative flex-shrink-0" style={{ background: product.bg }}>
+        <div className="w-full lg:w-[65%] h-[480px] lg:h-[600px] relative flex-shrink-0" style={{ background: product.bg }}>
           <img src={variantImage} alt={product.name} className="w-full h-full object-cover" 
                onError={(e) => e.target.src = product.image} />
           <div className="absolute top-4 left-4 flex gap-2">
