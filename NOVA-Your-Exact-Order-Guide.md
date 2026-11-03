@@ -1152,3 +1152,7 @@ export default function App(){
 Build in this order, you understand it because that's how you built it.
 
 Good luck!
+
+## Next things to add
+mske those circle colors clicksble
+tsp the isge to preview s full screen displsy 

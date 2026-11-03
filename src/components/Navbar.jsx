@@ -18,7 +18,19 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
     setText("CHECKOUT")
   }, 800)
 }
-  
+
+const qtyAdd = (id) =>{
+  setCart(cart.map(item=> 
+    item.id === id ? {...item, qty: item.qty + 1} : item))
+}
+const qtyMinus = (id) => {
+  setCart(cart => cart.map(item => {
+    if (item.id !== id) return item
+    if (item.qty <= 1) return null // remove if it would go to 0
+    return {...item, qty: item.qty - 1}
+  }).filter(Boolean))
+}
+
 
   return (
     <>
@@ -116,7 +128,13 @@ export default function Navbar({ scrollToGrid, search, setSearch, cart = [], set
           {cart.map(item => (
             <div key={item.id} className="flex gap-4 border-b pb-4">
               <img src={item.image} className="w-20 h-20 object-cover rounded-xl bg-gray-100" />
-              <div className="flex-1"><h4 className="text-sm font-medium">{item.name}</h4><p className="text-xs text-gray-500">Qty: {item.qty}</p><p className="text-sm font-bold mt-1">${item.price * item.qty}</p></div>
+              <div className="flex-1"><h4 className="text-sm font-medium">{item.name}</h4><p className="text-xs text-gray-500">Qty: {item.qty}</p>
+                <div className="flex gap-3">
+                  <button onClick={() => qtyMinus(item.id, -1)} className="w-6 h-6 rounded-full border flex items-center justify-center">−</button>
+                   <p className="text-sm font-bold mt-1">${item.price * item.qty}</p>
+                  <button onClick={() => qtyAdd(item.id, 1)} className="w-6 h-6 rounded-full border flex items-center justify-center">+</button>
+                </div>
+              </div>
               <button onClick={() => removeFromCart(item.id)} className="text-[11px] text-gray-400">Remove</button>
             </div>
           ))}
